@@ -33,10 +33,10 @@ function deepCopy(obj) {
   return child;
 }
 
-var old = 1;
+var old = {a:{c:1},b:1};
 var nold = copy(old);
 var deepold = deepCopy(old);
-old=2
+old.a.c=2
 console.log(old);
 console.log(nold);
 console.log(deepold);
