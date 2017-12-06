@@ -1,0 +1,59 @@
+//浅拷贝
+function copy(obj) {
+  var child = {}
+  for (var key in obj) {
+    child[key] = obj[key]
+  }
+  return child
+}
+
+//深层拷贝
+function deepCopy(obj) {
+  var child
+  var MytoString = Object.prototype.toString.call(obj)
+  switch (MytoString) {
+    case '[object Null]':
+      child = null
+      break;
+    case '[object String]':
+      child = obj + ''
+      break;
+    case '[object Number]':
+      // console.log(obj);
+      child = obj + 0
+      break;
+    case '[object Boolean]':
+      child = obj
+      break;
+    case '[object Array]':
+      obj.map(function (item) {
+        deepCopy(item)
+        return item
+      })
+      break;
+    case '[object Date]':
+      child = obj
+      break;
+    case '[object Object]':
+      child = {}
+      for (var key in obj) {
+        child[key] = deepCopy(obj[key])
+      }
+      break;
+    case '[object Function]':
+      child = obj
+      break;
+    default:
+      child = obj;
+      break;
+  }
+  return child;
+}
+
+var old = {a:{c:1},b:1};
+var nold = copy(old);
+var deepold = deepCopy(old);
+old.a.c=2
+console.log(old);
+console.log(nold);
+console.log(deepold);
