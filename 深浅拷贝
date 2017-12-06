@@ -27,8 +27,7 @@ function deepCopy(obj) {
       break;
     case '[object Array]':
       obj.map(function (item) {
-        deepCopy(item)
-        return item
+        return deepCopy(item)
       })
       break;
     case '[object Date]':
