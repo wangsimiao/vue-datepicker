@@ -12,17 +12,7 @@ function deepCopy(obj) {
   var child
   var MytoString = Object.prototype.toString.call(obj)
   switch (MytoString) {
-    case '[object Null]':
-      child = null
-      break;
-    case '[object String]':
-      child = obj + ''
-      break;
-    case '[object Number]':
-      // console.log(obj);
-      child = obj + 0
-      break;
-    case '[object Boolean]':
+    case '[object Null]'||'[object String]'||'[object Number]'||'[object Boolean]'||'[object Date]'||'[object Function]':
       child = obj
       break;
     case '[object Array]':
@@ -30,17 +20,11 @@ function deepCopy(obj) {
         return deepCopy(item)
       })
       break;
-    case '[object Date]':
-      child = obj
-      break;
     case '[object Object]':
       child = {}
       for (var key in obj) {
         child[key] = deepCopy(obj[key])
       }
-      break;
-    case '[object Function]':
-      child = obj
       break;
     default:
       child = obj;
@@ -49,10 +33,10 @@ function deepCopy(obj) {
   return child;
 }
 
-var old = {a:{c:1},b:1};
+var old = 1;
 var nold = copy(old);
 var deepold = deepCopy(old);
-old.a.c=2
+old=2
 console.log(old);
 console.log(nold);
 console.log(deepold);
