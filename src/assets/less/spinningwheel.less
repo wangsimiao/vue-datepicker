@@ -1,0 +1,159 @@
+/**
+ * 日期选择
+ */
+@import "_variables.less";
+#sw-wrapper {
+	position:absolute;
+  z-index:1000;
+	left:0;
+  bottom: 0;
+	width:100%;
+	font-family:helvetica, sans-serif;
+	background:rgba(0,0,0,0.7);
+	text-align:left;
+  transition-timing-function: ease-in;
+  transition-duration: 400ms;
+  transform: translate3d(0px, 260px, 0px);
+}
+
+#sw-header {
+	position:relative;
+	width:100%; height:43px;
+	background: #f2f2f2;
+	box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1);
+}
+
+#sw-cancel, #sw-done {
+	position:absolute;
+	height:43px;
+	line-height:43px;
+	padding:0 15px;
+	margin:0;
+	font-size: 14px;
+	font-weight: bold;
+	top: 0;
+}
+
+#sw-cancel {
+	left:0;
+	float:left;
+	color:#666;
+}
+
+#sw-done {
+	right:0px;
+	float:right;
+	color:#72a0e6;
+}
+
+#sw-slots-wrapper {
+	position:relative;
+	z-index:999;
+	display:block;
+	height:215px;
+	overflow:hidden;
+}
+
+#sw-slots {
+	display:table;
+	width:100%;
+	background:@colors_bg_lighter;
+	>:nth-child(1){
+		width: 38%;
+		float: left;
+	}
+	>:nth-child(2){
+		width: 31%;
+		float: left;
+	}
+	>:nth-child(3){
+		width: 31%;
+		float: left;
+	}
+}
+
+#sw-slots div {
+	display:table-cell;
+	height:100%;
+	padding-top:86px;
+	background-color:@colors_bg_lighter;
+}
+
+#sw-slots div:first-child { border:0; }
+
+#sw-slots ul {
+	padding:0 0 85px 0; margin:0;
+	list-style:none;
+}
+
+#sw-slots .sw-right { text-align:right; }
+#sw-slots .sw-center {
+   text-align:center;
+   background: #fff;
+   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 100ms;
+}
+#sw-slots .sw-shrink { width:1%; }
+#sw-slots .sw-readonly { background:@colors_bg; }
+
+#sw-slots li {
+	padding:0 8px;
+	height:44px;
+	overflow:hidden;
+	font:18px Helvetica,sans-serif;
+	color:#888888;
+	&.topshow{
+		margin:10px 0 -10px;
+	}
+	&.select{
+		color:#333;
+		font-size: 24px;
+		line-height: 1.7;
+	}
+	&.near{
+		font-size: 20px;
+	}
+	&.nearb{
+		font-size: 20px;
+		line-height: 2;
+	}
+}
+
+#sw-frame {
+	position:absolute;
+	z-index:1000;
+	left:0;
+	right:0;
+	bottom:90px;
+	height:44px;
+	border-width:16px !important;
+	// -webkit-border-image:url('@{datePickerUrl}/sw-alpha.png') 16;
+	&::before{
+		content: '年';
+		position: absolute;
+		font-size: 16px;
+		color:#656565;
+		height: 44px;
+		line-height: 44px;
+		top: 0%;
+		width: 56%;
+		text-align: center;
+		left: 10%;
+		border-top:1px solid @colors_border;
+		border-bottom:1px solid @colors_border;
+	}
+	&::after{
+		content: '月';
+		position: absolute;
+		font-size: 16px;
+		color:#656565;
+		height: 44px;
+		line-height: 44px;
+		top: 0%;
+		width: 38%;
+		text-align: center;
+		left: 52%;
+		border-top:1px solid @colors_border;
+		border-bottom:1px solid @colors_border;
+	}
+}

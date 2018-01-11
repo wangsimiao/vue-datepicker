@@ -1,0 +1,152 @@
+// Variables
+// --------------------------------------------------
+
+// common colors
+// -------------------------
+@blueColor: #1689ff;
+@greenColor: #6DBE41;
+@grayColor: #ddd;
+@blackColor: #333;
+@blackLightColor: #666;
+@blackLighterColor: #999;
+
+// common colors - 每个颜色定义3-7个维度
+// -------------------------
+
+// 黑色 - 主要用于字体
+@color_black_darker:  #000;
+//@color_black_dark:  xxx;  -- 预留
+@color_black:  #333;
+//@color_black_light:  xxx;  -- 预留
+@color_black_lighter:  #666;
+
+// 灰色 - 主要用于字体或者border
+@color_gray_darker:  #999;
+@color_gray_dark:  #aaa;
+@color_gray:  #bdbdbd;
+@color_gray_light:  #ddd;
+@color_gray_lighter:  #e3e3e3;
+
+// 偏白色 - 主要用于背景等
+@color_white:  #fff;
+@color_white_dark:  #f2f2f2;
+@color_white_darker:  #ededed;
+
+// 蓝色
+@color_blue_darker:  #2f7fe2;
+//@color_blue_dark:  xxx;  -- 预留
+@color_blue:  #3278ee;
+@color_blue_light:  #38C7F1;
+@color_blue_lighter:  #d2eaf2;   // 背景
+
+
+// 绿色
+//@color_green_darker:  #2f7fe2; -- 预留
+@color_green_dark:  #53b52a;   // 绿色border
+@color_green:  #6dbe41; // 绿色字体或者背景
+@color_green_light:  #69ff59;
+@color_green_lighter:  #c2e89b;
+
+// 红色
+//@color_red_darker:  #2f7fe2; -- 预留
+@color_red_dark:  #a6392d;
+@color_red:  #e54d3f; // 红色字体或者背景
+@color_red_light:  #ea69a2;   // 粉红
+//@color_red_lighter:  #d2eaf2; -- 预留
+
+
+// 橘色
+@color_orange:  #fd6721; // 橘色字体
+@color_orange_light:  #f49938; // 橘色字体
+@color_orange_lighter:  #ffeed1; // 橘色背景
+@color_orange_lightest:  #fffbf7; // 橘色背景
+
+// 黄色
+@color_yellow:  #FFA503; // 黄色字体
+@color_yellow_lighter:  #fffcf1; // 黄色背景
+
+// 页面文字颜色
+@colors_txt_dark:  @color_black;       // #333
+@colors_txt:  @color_black_lighter;    // #666
+@colors_txt_light:  @color_gray_darker;    // #999
+@colors_txt_lighter:  @color_gray_dark;    // #aaa
+@colors_txt_lightest:  @color_gray;    // #bdbdbd
+
+// 页面链接颜色
+@colors_link:  @color_blue;    // #2da1f7
+@colors_link_border:  @color_blue_darker;    // #2f7fe2
+
+// 页面背景颜色
+@colors_bg_dark:  @color_gray;    // #bdbdbd
+@colors_bg:  @color_white_dark;    // #f2f2f2
+@colors_bg_lighter:  @color_white_dark;    // #f2f2f2
+
+// 页面border颜色
+@colors_border: @color_gray_lighter;    // #e3e3e3
+
+
+
+// font size
+// -------------------------
+@font_size_smallest:			0.8rem; // 8px
+@font_size_smaller:				1.0rem; // 10px
+@font_size_small:				1.2rem; // 12px
+@font_size_base:				1.4rem; // 14px
+@font_size_large:				1.6rem; // 16px
+@font_size_larger:				1.8rem; // 18px
+@font_size_largest:				2.2rem; // 22px
+
+
+// img path
+// -------------------------
+@img_icons:"../img/icons";
+
+// sprites images
+// -------------------------
+// @img_sprite_hf: "@{img_icons}/sprite_head-foot.png";//页面头尾
+// @img_sprite_activity: "@{img_icons}/sprite_activity.png";//活动共用图片
+
+
+
+//------- del -----
+// sprites image path
+// -------------------------
+// @img_sprite_1: "../img/sprites-1.png?_20141215";
+// @img_sprite_2: "../img/sprites-2.png";
+// @img_sprite_3: "../img/sprites-3.png";
+// @img_menu:"../img/menu.png";
+// @img_sprite_doctor: "../img/sprites-doctor.png";
+// @img_sprite_consult: "../img/sprites-consult.png";
+// @img_sprite_comment: "../img/sprites-comment.png";
+
+// sprites functions -- function.less
+// .fn_sprites_1(@position: 0 0,@base: ''){
+//   background-image: url("@{base}@{img_sprite_1}");
+//   background-repeat:no-repeat;
+//   background-size:150px 1235px;
+//   background-position:@position;
+// }
+// .fn_sprites_2(@position: 0 0,@base: ''){
+//   background-image: url("@{base}@{img_sprite_2}");
+//   background-repeat:no-repeat;
+//   background-size:80px 978px;
+//   background-position:@position;
+// }
+// .fn_sprites_3(@position: 0 0,@base: ''){
+//   background-image: url("@{base}@{img_sprite_3}");
+//   background-repeat:no-repeat;
+//   background-size:95px 435px;
+//   background-position:@position;
+// }
+// .fn_sprites_doctor(@position: 0 0,@base: ''){
+//   background-image: url("@{base}@{img_sprite_doctor}");
+//   background-repeat:no-repeat;
+//   background-size:60/2px 380/2px;
+//   background-position:@position;
+// }
+// .fn_sprites_menu(@position: 0 0,@base: ''){
+//   background-image: url("@{base}@{img_menu}");
+//   background-repeat:no-repeat;
+//   background-size:26px 173px;
+//   background-position:@position;
+// }
